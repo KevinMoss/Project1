@@ -1,21 +1,27 @@
 #header{
-	text-align: center;
-	color: green;
-	background-color:white;
+text-align: center;
+color: green;
+background-color:white;
 }
 #header1{
-	text-align: center;
-	color:green;
-	font-size:20px;
-	background-color:white;
+text-align: center;
+color:green;
+font-size:20px;
+background-color:white;
 }
 body{
-	height:100%;
-	width:100%;
-	border:5px;
-	border-color:red;
-	border-style:solid;
-	margin: 0 auto;
-	background-color:blue;
-	
+height:100%;
+width:100&;
+border:5px;
+border-color:red;
+border-style:solid;
+margin: 0 auto;
+	background-image: url("code.png");
 }
+#button1{
+margin:0 auto;
+text-align:center;
+
+}
+#intro{margin:0 auto;
+text-align:center;}

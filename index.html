@@ -1,43 +1,57 @@
+<!D
+
 <!DOCTYPE>
 <html>
- <head>
- <link rel="stylesheet" type="text/css" href="wire frame.css">
-	<title>
-	</title>
- </head>
- <body>
- <div id="wrapper">
- <div id="header">
-	<h1>Code Road</h1>
-</div>
-<div id="header1">
-	<u>Welcome To Your DOOOM!!!!!!</u>
-</div>
-	<p id="intro"> welcome to CODE ROAD, revision of basic coding techniques and some basic computer knowledge for those wishing to learn a basis of IT</p>
-<div id="button1">
-<button onclick="alert()">button</button>
-<button onclick="back()">back</button>
-</div>	
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<title>
+		</title>
+	</head>
+<body id="body">
+	<div id="wrapper">
+		<div id="header">
+			<h1>Code Road</h1>
+		</div>
+	
+		<div id="header1">
+			<u id = "doom">Welcome To Your DOOOM!!!!!!</u>
+		</div>
+	
+		<div id = "intro">
+			<p id="intro1"> welcome to CODE ROAD, revision of basic coding techniques and some basic computer knowledge for those wishing to learn a basis of IT</p>
+		</div>
+	
+		<div id="button1">
+			<button onclick="loadXMLDoc()">button</button>
+
+		</div>
+	</div>
+	<script>
 
 
-
-
-
-</div>
-
-
-
-<script>
-function alert(){
-  document.getElementById("intro").innerHTML = "Paragraph changed."
+	</script>
+	<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("body").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","intro.txt",true);
+xmlhttp.send();
 }
-function back(){
-  document.getElementById("intro").innerHTML = "welcome to CODE ROAD, revision of basic coding techniques and some basic computer knowledge for those wishing to learn a basis of IT"
-}
-</script>
-
-
-
-
+	</script>
 </body>
 </html>

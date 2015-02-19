@@ -16,12 +16,17 @@ border:5px;
 border-color:red;
 border-style:solid;
 margin: 0 auto;
-	background-image: url("code.png");
+background-image: url("code.pn")
 }
 #button1{
 margin:0 auto;
 text-align:center;
 
 }
-#intro{margin:0 auto;
+#intro{
+margin:0 auto;
 text-align:center;}
+
+#main{
+text-align:center;
+margin:0 auto;}

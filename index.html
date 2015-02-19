@@ -1,14 +1,35 @@
-
-
-<!DOCTYPE>
+<!DOCTYPE> 
 <html>
 	<head>
+		<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("change").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","intro.txt",true);
+xmlhttp.send();
+}
+	</script>
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<title>
 		</title>
 	</head>
 <body id="body">
-	<div id="wrapper">
+	<div id="change">
 		<div id="header">
 			<h1>Code Road</h1>
 		</div>
@@ -25,33 +46,23 @@
 			<button onclick="loadXMLDoc()">button</button>
 
 		</div>
+		<div id ="main">
+			<h3>Please select a game you wish to play.</h3>
+			<ol>
+				<li><button>Web Design</button></li>
+				<br/>
+				<li><button>Intro to maths in comp</button></li>
+				<br/>
+				<li><button>Operating systems</button></li>
+				<br/>
+				<li><button>intro to programming</button></li>
+				
+				
+			</ol>
+		</div>
+		
 	</div>
-	<script>
+	
 
-
-	</script>
-	<script>
-function loadXMLDoc()
-{
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("body").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","intro.txt",true);
-xmlhttp.send();
-}
-	</script>
 </body>
 </html>
